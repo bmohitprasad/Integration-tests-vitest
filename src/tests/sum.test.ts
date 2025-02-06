@@ -1,10 +1,10 @@
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeAll, beforeEach, describe, expect, it } from "vitest";
 import { app } from "..";
 import request from "supertest";
 import resetDb from "./helpers/reset-db";
 
 describe("POST /sum", () => {
-    beforeEach(async () => {
+    beforeAll(async () => {
         console.log("clearing db");
         await resetDb();
     });
